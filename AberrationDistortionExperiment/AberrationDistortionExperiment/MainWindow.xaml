@@ -1,0 +1,26 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AberrationDistortionExperiment"
+        xmlns:System="clr-namespace:System;assembly=System.Runtime" x:Class="AberrationDistortionExperiment.MainWindow"
+        mc:Ignorable="d"
+        Title="AberrationDistortionExperiment" Height="446" Width="570">
+    <Grid>
+        <TextBox x:Name="AberrationDistortionConstant" HorizontalAlignment="Center" Margin="0,123,0,0" TextWrapping="Wrap" Text="-0.00000001" VerticalAlignment="Top" Width="80"/>
+        <Button x:Name="ButtonOpenImageFileDialog" Content="이미지 파일 열기" HorizontalAlignment="Left" Margin="160,16,0,0" VerticalAlignment="Top" Height="86" Width="98" Click="ButtonOpenImageFileDialog_Click" RenderTransformOrigin="0.582,1.349"/>
+        <Button x:Name="ButtonTargetDirectoryDialog" Content="작업 디렉토리 열기" HorizontalAlignment="Left" Margin="20,16,0,0" VerticalAlignment="Top" Height="86" Width="126" Click="ButtonTargetDirectoryDialog_Click" RenderTransformOrigin="0.582,1.349"/>
+        <Label x:Name="Label_AberrationDistortionConstant" Content="Aberration Distortion Constant" HorizontalAlignment="Left" Margin="20,119,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Margin="301,16,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="233" AcceptsReturn="True" VerticalScrollBarVisibility="Auto" Text="0.0: 원본 유지(왜곡 없음)&#10;0.0001 ~ 0.001: 약한 볼록 왜곡(배럴 왜곡)&#10;0.001 ~ 0.01: 강한 볼록 왜곡&#10;-0.0001 ~ -0.001: 약한 오목 왜곡(핀쿠션 왜곡)&#10;-0.001 ~ -0.01: 강한 오목 왜곡" Height="86" FontSize="10"/>
+        <Button x:Name="MakeOutputImages" Content="이미지 분할 > _구면 왜곡_ > Perspective 왜곡 보정 > Mask Image 적용" HorizontalAlignment="Center" Margin="0,216,0,0" VerticalAlignment="Top" Height="38" Width="418" Click="MakeOutputImages_Click"/>
+        <TextBox x:Name="Position_PointX0" HorizontalAlignment="Left" Margin="163,285,0,0" TextWrapping="Wrap" Text="50" VerticalAlignment="Top" Width="46" RenderTransformOrigin="1.074,7.956"/>
+        <TextBox x:Name="Position_PointX1" HorizontalAlignment="Left" Margin="319,285,0,0" TextWrapping="Wrap" Text="50" VerticalAlignment="Top" Width="46" RenderTransformOrigin="1.074,7.956"/>
+        <TextBox x:Name="Position_PointX3" HorizontalAlignment="Left" Margin="163,327,0,0" TextWrapping="Wrap" Text="50" VerticalAlignment="Top" Width="46" RenderTransformOrigin="1.074,7.956"/>
+        <TextBox x:Name="Position_PointX2" HorizontalAlignment="Left" Margin="319,327,0,0" TextWrapping="Wrap" Text="50" VerticalAlignment="Top" Width="46" RenderTransformOrigin="1.074,7.956"/>
+        <TextBox x:Name="Position_PointY0" HorizontalAlignment="Left" Margin="214,285,0,0" TextWrapping="Wrap" Text="50" VerticalAlignment="Top" Width="46" RenderTransformOrigin="1.074,7.956"/>
+        <TextBox x:Name="Position_PointY3" HorizontalAlignment="Left" Margin="214,327,0,0" TextWrapping="Wrap" Text="50" VerticalAlignment="Top" Width="46" RenderTransformOrigin="1.074,7.956"/>
+        <TextBox x:Name="Position_PointY1" HorizontalAlignment="Left" Margin="370,285,0,0" TextWrapping="Wrap" Text="50" VerticalAlignment="Top" Width="46" RenderTransformOrigin="1.074,7.956"/>
+        <TextBox x:Name="Position_PointY2" HorizontalAlignment="Left" Margin="370,327,0,0" TextWrapping="Wrap" Text="50" VerticalAlignment="Top" Width="46" RenderTransformOrigin="1.074,7.956"/>
+    </Grid>
+</Window>
